@@ -22,7 +22,7 @@ function App() {
           </div>
         </section>
 
-        <section className='text-center p-12 flex flex-col justify-center items-center'>
+        <section className='text-center px-12 flex flex-col justify-center items-center py-4'>
           <h2 className='text-[32px] text-primary-blue'>Vision</h2>
           <p className='text-xs'>Raising a great army of Christians from the various denominations for an imminent great harvest of souls into the kingdom of God; 
           </p>
@@ -31,7 +31,8 @@ function App() {
           <p className='text-xs'>Fulfilling the pre-rapture necessity (Eph. 4:11-15;5:27)
           </p>
         </section>
-        <section className='text-center p-12 flex flex-col justify-center items-center'>
+
+        <section className='text-center py-4 px-12 flex flex-col justify-center items-center'>
           <h2 className='text-[32px] text-primary-blue'>Mission</h2>
           <p className='py-4 text-xs '>To bring Jacob (the Church) back again to God;
           </p>
@@ -47,7 +48,7 @@ function App() {
         <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-center pt-8'>
           <h2 className='text-white text-[32px]'>About Us</h2>
 
-          <p className='py-8 text-xs  leading-8 w-[274px]'>Founded in 2004, we’re the campus arm of the Watchman Catholic Chaismatic Renewal Movement located at the Univerity of Nigeria Nsukka.</p>
+          <p className='py-4 text-xs  leading-8 w-[274px]'>Founded in 2004, we’re the campus arm of the Watchman Catholic Chaismatic Renewal Movement located at the Univerity of Nigeria Nsukka.</p>
         </section>
 
         <div className='flex flex-col justify-center items-center relative my-5'>
@@ -58,8 +59,8 @@ function App() {
               <p className='text-center stroke-white text-[16px] text-white w-[262px] font-semibold pb-2 px-12'>
               Sunday Light Fellowship
               </p>
-              <p className="font-semibold text-white text-xs">@Carva Auitorium</p>
-              <p className="text-center text-white text-xs pt-3">8:00am - 11:30pm </p>
+              <p className="font-semibold text-white text-[12px]">@Carva Auitorium</p>
+              <p className="text-center text-white text-[12px] pt-3">8:00am - 11:30pm </p>
             </div>
           </section>
 
@@ -99,8 +100,19 @@ function App() {
             <article className='flex flex-col justify-center items-center text-center'>
               <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
               <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
-              <div className='pt-3'>
-                <p className='text-primary-blue text-[15px] font-semibold'>Favour Nnabuife</p>
+              <div className='pt-3 text-xs'>
+                <p className='text-primary-blue text-[12px] font-semibold'>Favour Nnabuife</p>
+                <p className='text-xs leading-5'>Graduate (First Class) <br/>
+                <span className='text-xs'>B.SC Pharmacy.</span>
+                </p>
+                
+              </div>
+            </article>
+            <article className='flex flex-col justify-center items-center text-center my-6'>
+              <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
+              <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
+              <div className='pt-3 text-xs'>
+                <p className='text-primary-blue  font-semibold'>Favour Nnabuife</p>
                 <p className='text-xs leading-5'>Graduate (First Class) <br/>
                 <span className='text-xs'>B.SC Pharmacy.</span>
                 </p>
@@ -110,30 +122,59 @@ function App() {
             <article className='flex flex-col justify-center items-center text-center'>
               <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
               <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
-              <div className='pt-3'>
-                <p className='text-primary-blue text-[15px] font-semibold'>Favour Nnabuife</p>
-                <p className='text-xs leading-5'>Graduate (First Class) <br/>
-                <span className='text-xs'>B.SC Pharmacy.</span>
+              <div className='pt-3 text-xs'>
+                <p className='text-primary-blue font-semibold'>Favour Nnabuife</p>
+                <p className=' leading-5'>Graduate (First Class) <br/>
+                <span className=''>B.SC Pharmacy.</span>
                 </p>
-                
               </div>
             </article>
-            <article className='flex flex-col justify-center items-center text-center'>
-              <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
-              <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
-              <div className='pt-3'>
-                <p className='text-primary-blue text-[15px] font-semibold'>Favour Nnabuife</p>
-                <p className='text-xs leading-5'>Graduate (First Class) <br/>
-                <span className='text-xs'>B.SC Pharmacy.</span>
-                </p>
-                
-              </div>
-            </article>
-            
-           
-           
           </div>
-        
+        </section>
+        <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6'>
+          <h2 className='text-[32px] text-white'>Gallery </h2>
+          <div>
+            <img src="./images/img-event.png" alt="" className='py-6'/>
+          </div>
+        </section>
+
+        <section className='flex flex-col justify-center items-center text-center my-12 text-xs'>
+          <h2 className='text-[32px] text-primary-blue py-4'>Support Us</h2>
+
+          <div className='py-4'>
+            <p>Bank: First Bank</p>
+            <p>Acc No: 1490256593</p>
+            <p>Chiamaka Uchechukwu</p>
+          </div>
+          <div className='py-4'>
+            <p>Bank: First Bank</p>
+            <p>Acc No: 1490256593</p>
+            <p>Chiamaka Uchechukwu</p>
+          </div>
+          <div className='py-4'>
+            <p>Bank: First Bank</p>
+            <p>Acc No: 1490256593</p>
+            <p>Chiamaka Uchechukwu</p>
+          </div>
+        </section>
+
+        <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-xs py-12'>
+          <h2 className='text-[32px] py-4'>Contact Us</h2>
+          <div className='py-6 leading-9'>
+            <div>
+              <p>+2348103763064</p>
+            </div>
+
+            <div className=''>
+              <p>+2348103763064</p>
+            </div>
+
+            <div>
+              <p>+2348103763064</p>
+            </div>
+          </div>
+          
+
         </section>
       </main>
     </div>
