@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import { FaBars } from 'react-icons/fa';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
 function App() {
@@ -102,7 +104,7 @@ function App() {
               <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
               <div className='pt-3 text-xs'>
                 <p className='text-primary-blue text-[12px] font-semibold'>Favour Nnabuife</p>
-                <p className='text-xs leading-5'>Graduate (First Class) <br/>
+                <p className='text-xs leading-5'> (First Class) <br/>
                 <span className='text-xs'>B.SC Pharmacy.</span>
                 </p>
                 
@@ -113,7 +115,7 @@ function App() {
               <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
               <div className='pt-3 text-xs'>
                 <p className='text-primary-blue  font-semibold'>Favour Nnabuife</p>
-                <p className='text-xs leading-5'>Graduate (First Class) <br/>
+                <p className='text-xs leading-5'> (First Class) <br/>
                 <span className='text-xs'>B.SC Pharmacy.</span>
                 </p>
                 
@@ -124,7 +126,7 @@ function App() {
               <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
               <div className='pt-3 text-xs'>
                 <p className='text-primary-blue font-semibold'>Favour Nnabuife</p>
-                <p className=' leading-5'>Graduate (First Class) <br/>
+                <p className=' leading-5'> (First Class) <br/>
                 <span className=''>B.SC Pharmacy.</span>
                 </p>
               </div>
@@ -158,7 +160,11 @@ function App() {
           </div>
         </section>
 
-        <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-xs py-12'>
+        
+      </main>
+
+      <footer>
+      <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-xs py-12'>
           <h2 className='text-[32px] py-4'>Contact Us</h2>
           <div className='py-6 leading-9'>
             <div>
@@ -173,10 +179,19 @@ function App() {
               <p>+2348103763064</p>
             </div>
           </div>
-          
-
         </section>
-      </main>
+
+        <section>
+          {/* <div className='flex justify-center'>
+            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faYoutube} />
+            <FontAwesomeIcon icon={faTelegram} />
+            <FontAwesomeIcon icon={faTiktok} />
+          </div> */}
+        </section>
+      </footer>
     </div>
 
   )
