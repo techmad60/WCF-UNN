@@ -9,6 +9,8 @@ export default {
       fontFamily: {
         'poppins': [ 'Poppins', 'sans-serif'],
         'zhi-mang-xing': [ 'Zhi Mang Xing', 'cursive'],
+        'pontano':[ 'Pontano Sans, sans-serif'],
+        
       },
       backgroundImage: {
         'bg-mobile': "url('/images/img-1.png')"
