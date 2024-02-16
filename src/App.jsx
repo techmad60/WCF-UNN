@@ -1,8 +1,20 @@
 import React from 'react';
 import './App.css';
 import { FaBars } from 'react-icons/fa';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee, faCheckSquare} from '@fortawesome/free-solid-svg-icons';
+// import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+import twitterIcon from './assets/icons/phone.svg';
+
+library.add(fab, faCoffee);
+// import facebookIcon from './assets/icons/facebook.svg';
+// import youtubeIcon from './assets/icons/youtube.svg';
+// import telegramIcon from './assets/icons/telegram.svg';
+// import tiktokIcon from './assets/icons/tiktok.svg';
+
 
 
 function App() {
@@ -163,34 +175,41 @@ function App() {
         
       </main>
 
-      <footer>
-      <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-xs py-12'>
+      <footer className='bg-primary-blue text-white py-12'>
+      <section className=' flex flex-col justify-center items-center text-xs '>
           <h2 className='text-[32px] py-4'>Contact Us</h2>
           <div className='py-6 leading-9'>
-            <div>
-              <p>+2348103763064</p>
+            <div className='flex justify-centeritems-xenter gap-2'>
+              <img src={twitterIcon} className='w-4' alt="Twitter Icon" />
+              <p>
+                +2348103763064</p>
             </div>
 
-            <div className=''>
-              <p>+2348103763064</p>
+            <div className='flex justify-centeritems-xenter gap-2'>
+              <img src={twitterIcon} className='w-4' alt="Twitter Icon" />
+              <p>
+                +2348103763064</p>
             </div>
 
-            <div>
-              <p>+2348103763064</p>
+            <div className='flex justify-centeritems-xenter gap-2'>
+              <img src={twitterIcon} className='w-4' alt="Twitter Icon" />
+              <p>
+                +2348103763064</p>
             </div>
           </div>
         </section>
 
-        <section>
-          {/* <div className='flex justify-center'>
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faYoutube} />
-            <FontAwesomeIcon icon={faTelegram} />
-            <FontAwesomeIcon icon={faTiktok} />
-          </div> */}
+        <section className='flex flex-col justify-center items-center text-white'>
+          <p className='text-xs font-semibold'>Follow us on social media</p>
+          <div className='flex justify-center items-center gap-4 py-4'>
+            <FontAwesomeIcon className='text-xl' icon={['fab', 'square-facebook'] } />
+            <FontAwesomeIcon className='text-xl' icon={['fab', 'x-twitter']} />
+            <FontAwesomeIcon className='text-xl' icon={['fab', 'instagram']} />
+            <FontAwesomeIcon className='text-xl' icon={['fab', 'telegram']} />
+            <FontAwesomeIcon className='text-xl' icon={['fab', 'tiktok']} />
+          </div>
         </section>
+        <p className='text-xs text-center mt-8'>Designed and built with love by <a href=''  className='text-active-blue'>Techmad</a>.</p>
       </footer>
     </div>
 
