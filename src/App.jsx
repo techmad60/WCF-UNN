@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+// import quotes from '../quotes.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -44,7 +45,7 @@ let currentIndex = 0;
 
 // Function to fetch quotes from the JSON file
 async function fetchQuotes() {
-  const response = await fetch('./quotes.json'); // Path to your JSON file
+  const response = await fetch('../quotes.json'); // Path to your JSON file
   const data = await response.json();
   return data;
 }
