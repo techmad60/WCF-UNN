@@ -39,6 +39,49 @@ function App() {
     };
   }, [isNavOpen]);
 
+// Global variable to keep track of the current index
+let currentIndex = 0;
+
+// Function to fetch quotes from the JSON file
+async function fetchQuotes() {
+  const response = await fetch('quotes.json'); // Path to your JSON file
+  const data = await response.json();
+  return data;
+}
+
+// Function to change the Bible quotation and verse with animation
+async function changeQuote() {
+  const quotes = await fetchQuotes();
+
+  // Get the quote and verse at the current index
+  const quote = quotes[currentIndex];
+
+  // Update the HTML with the new quote and verse
+  document.getElementById('quote').textContent = quote.text;
+  document.getElementById('verse').textContent = quote.verse;
+
+  // Fade out the current quote
+ 
+
+  // Wait for a short delay for the fade-out animation to complete
+  // await new Promise(resolve => setTimeout(resolve, 500));
+
+  // Fade in the new quote
+  
+
+  // Increment the current index and reset to 0 if it exceeds the array length
+  currentIndex = (currentIndex + 1) % quotes.length;
+}
+
+// Initial call to changeQuote function
+changeQuote();
+
+// Set interval to change the quote every 5 seconds (5000 milliseconds)
+setInterval(changeQuote, 6000);
+
+
+
+
 
   return (
     <div className='flex flex-col font-poppins'>
@@ -46,10 +89,10 @@ function App() {
       <main>
         <section className='hero-img  bg-bg-mobile bg-no-repeat relative h-[297px] bg-cover bg-center'> 
           <div className='absolute overlay bg-transparent-blue w-full flex flex-col items-center justify-center  top-0 left-0 h-[297px]'>
-            <p className='text-center stroke-white text-[24px] text-white w-[262px] font-semibold pb-6'>"
+            <p id='quote' className='text-center stroke-white text-[24px] text-white w-[262px] font-semibold pb-6' >"
             God is spirit, and those who worship him must worship in spirit and truth."
             </p>
-            <p className="font-zhi-mang-xing text-center text-white text-[32px] ">John 4:24</p>
+            <p id='verse' className="font-zhi-mang-xing text-center text-white text-[32px]">John 4:24</p>
           </div>
         </section>
 
@@ -118,7 +161,7 @@ function App() {
         <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5' id='events'>
           <h2 className='text-[32px]'>Upcoming events</h2>
           <img src="./images/img-event.png" alt="" className='w-[272px] rounded-[20px] mt-6'/>
-          <p className='font-semibold text-[20px] py-2'>Sister's Week</p>
+          <p className='font-medium text-[20px] py-2 font-zhi-mang-xing tracking-[0.2em]'>Sister's Week</p>
           <p className='px-12 pb-3 text-xs'>Topic: <span className='font-medium'>"THE EMERGENCE OF HOLY WOMEN OF INFLUENCE."</span></p>
           <p className='px-12 pb-3 text-xs'>Text: <span className='font-medium'> Exodus 14:14</span></p>
           <p className='pt-6 text-xs'>( Feb: 18th-25th )</p>
@@ -173,7 +216,7 @@ function App() {
           <h2 className='text-[32px]'>Quote of the week</h2>
           <img src="./images/img-event.png" alt="" className='w-[272px] rounded-[20px] mt-6'/>
           <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>
-          When God decides to favour you, all men will be in awe of you </p>
+          When God decides to favour you, all men will be in awe of you. </p>
           <p className='font-zhi-mang-xing text-xl'>~Pastor Chris</p>
 
           <div className='pt-4 leading-9'>
