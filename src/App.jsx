@@ -3,7 +3,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faX } from '@fortawesome/free-solid-svg-icons'
+import { faX } from '@fortawesome/free-solid-svg-icons'
 import Header from './components/Header';
 import twitterIcon from './assets/icons/phone.svg';
 
@@ -44,7 +44,7 @@ let currentIndex = 0;
 
 // Function to fetch quotes from the JSON file
 async function fetchQuotes() {
-  const response = await fetch('quotes.json'); // Path to your JSON file
+  const response = await fetch('./quotes.json'); // Path to your JSON file
   const data = await response.json();
   return data;
 }
