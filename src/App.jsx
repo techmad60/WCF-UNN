@@ -1,31 +1,48 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import { FaBars } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCoffee, faCheckSquare} from '@fortawesome/free-solid-svg-icons';
-// import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-
+import { faCheckSquare, faX } from '@fortawesome/free-solid-svg-icons'
+import Header from './components/Header';
 import twitterIcon from './assets/icons/phone.svg';
 
-library.add(fab, faCoffee);
-// import facebookIcon from './assets/icons/facebook.svg';
-// import youtubeIcon from './assets/icons/youtube.svg';
-// import telegramIcon from './assets/icons/telegram.svg';
-// import tiktokIcon from './assets/icons/tiktok.svg';
+library.add(fab, faX);
+
+
 
 
 
 function App() {
-  
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleToggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  useEffect(() => {
+    // Add or remove a class to the body and html to disable/enable scrolling
+    const body = document.body;
+    const html = document.documentElement;
+
+    if (isNavOpen) {
+      body.style.overflow = 'hidden';
+      html.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'visible';
+      html.style.overflow = 'visible';
+    }
+    // Clean up the effect on component unmount
+    return () => {
+      body.style.overflow = 'visible';
+      html.style.overflow = 'visible';
+    };
+  }, [isNavOpen]);
+
 
   return (
     <div className='flex flex-col font-poppins'>
-      <header className='flex justify-between p-4 items-center'>
-        <img src="/images/WCF-UNN-logo.png" alt="" className='w-8'/>
-        <FaBars className='text-xl' /> 
-      </header>
+      <Header handleToggleNav={handleToggleNav} isNavOpen={isNavOpen}/>
       <main>
         <section className='hero-img  bg-bg-mobile bg-no-repeat relative h-[297px] bg-cover bg-center'> 
           <div className='absolute overlay bg-transparent-blue w-full flex flex-col items-center justify-center  top-0 left-0 h-[297px]'>
@@ -59,7 +76,7 @@ function App() {
           <p className='py-4 text-xs'>To be a light to the gentiles (the unsaved); and
           </p>
         </section>
-        <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-center pt-8'>
+        <section className='bg-primary-blue flex flex-col justify-center items-center text-white text-center pt-8' id='about-us'>
           <h2 className='text-white text-[32px]'>About Us</h2>
 
           <p className='py-4 text-xs  leading-8 w-[274px]'>Founded in 2004, we’re the campus arm of the Watchman Catholic Chaismatic Renewal Movement located at the Univerity of Nigeria Nsukka.</p>
@@ -98,11 +115,11 @@ function App() {
             </div>
           </section>
         </div>
-        <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5'>
+        <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5' id='events'>
           <h2 className='text-[32px]'>Upcoming events</h2>
           <img src="./images/img-event.png" alt="" className='w-[272px] rounded-[20px] mt-6'/>
           <p className='font-semibold text-[20px] py-2'>Sister's Week</p>
-          <p className='px-12 pb-3 text-xs'>Topic: <span className='font-medium'>"The lord shall fight for you, and you shall hold your peace."</span></p>
+          <p className='px-12 pb-3 text-xs'>Topic: <span className='font-medium'>"THE EMERGENCE OF HOLY WOMEN OF INFLUENCE."</span></p>
           <p className='px-12 pb-3 text-xs'>Text: <span className='font-medium'> Exodus 14:14</span></p>
           <p className='pt-6 text-xs'>( Feb: 18th-25th )</p>
         </section>
@@ -175,7 +192,7 @@ function App() {
         
       </main>
 
-      <footer className='bg-primary-blue text-white py-12'>
+      <footer className='bg-primary-blue text-white pt-12 pb-8' id='contact-us'>
       <section className=' flex flex-col justify-center items-center text-xs '>
           <h2 className='text-[32px] py-4'>Contact Us</h2>
           <div className='py-6 leading-9'>
