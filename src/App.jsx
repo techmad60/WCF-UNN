@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-// import quotes from '../quotes.json'
+import quotes from '../quotes.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -21,6 +21,9 @@ function App() {
     setIsNavOpen(!isNavOpen);
   };
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [quoteData, setQuoteData] = useState([]);
+
   useEffect(() => {
     // Add or remove a class to the body and html to disable/enable scrolling
     const body = document.body;
@@ -40,49 +43,20 @@ function App() {
     };
   }, [isNavOpen]);
 
-// Global variable to keep track of the current index
-let currentIndex = 0;
+  useEffect(() => {
+    // Set quote data on component mount
+    setQuoteData(quotes);
+  }, []);
 
-// Function to fetch quotes from the JSON file
-async function fetchQuotes() {
-  const response = await fetch('../quotes.json'); // Path to your JSON file
-  const data = await response.json();
-  return data;
-}
+  useEffect(() => {
+    // Set interval to change the quote every 5 seconds
+    const intervalId = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % quoteData.length);
+    }, 6000);
 
-// Function to change the Bible quotation and verse with animation
-async function changeQuote() {
-  const quotes = await fetchQuotes();
-
-  // Get the quote and verse at the current index
-  const quote = quotes[currentIndex];
-
-  // Update the HTML with the new quote and verse
-  document.getElementById('quote').textContent = quote.text;
-  document.getElementById('verse').textContent = quote.verse;
-
-  // Fade out the current quote
- 
-
-  // Wait for a short delay for the fade-out animation to complete
-  // await new Promise(resolve => setTimeout(resolve, 500));
-
-  // Fade in the new quote
-  
-
-  // Increment the current index and reset to 0 if it exceeds the array length
-  currentIndex = (currentIndex + 1) % quotes.length;
-}
-
-// Initial call to changeQuote function
-changeQuote();
-
-// Set interval to change the quote every 5 seconds (5000 milliseconds)
-setInterval(changeQuote, 6000);
-
-
-
-
+    // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [quoteData]);
 
   return (
     <div className='flex flex-col font-poppins'>
@@ -90,10 +64,9 @@ setInterval(changeQuote, 6000);
       <main>
         <section className='hero-img  bg-bg-mobile bg-no-repeat relative h-[297px] bg-cover bg-center'> 
           <div className='absolute overlay bg-transparent-blue w-full flex flex-col items-center justify-center  top-0 left-0 h-[297px]'>
-            <p id='quote' className='text-center stroke-white text-[24px] text-white w-[262px] font-semibold pb-6' >"
-            God is spirit, and those who worship him must worship in spirit and truth."
+            <p id='quote' className='text-center stroke-white text-[24px] text-white w-[262px] font-semibold pb-6' >{quoteData[currentIndex]?.text}
             </p>
-            <p id='verse' className="font-zhi-mang-xing text-center text-white text-[32px]">John 4:24</p>
+            <p id='verse' className="font-zhi-mang-xing text-center text-white text-[32px]">{quoteData[currentIndex]?.verse}</p>
           </div>
         </section>
 
