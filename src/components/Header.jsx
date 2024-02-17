@@ -22,7 +22,7 @@ const Header = ({handleToggleNav, isNavOpen}) => {
       aria-label='nav-mobile-header'
       className={`absolute top-0 right-0 bg-white flex flex-col min-h-screen w-3/4 items-center  pt-4 transition-all duration-300 ease-in-out ${isNavOpen ? 'fixed' : 'hidden transform translate-x-full '} z-50`}
     >
-      <button onClick={handleToggleNav} className=' lg:hidden '>
+      <button onClick={handleToggleNav} className=' lg:hidden pt-4'>
         <FontAwesomeIcon icon = 'x' className='text-xl' />
       </button>
       <ul className='leading-[4rem] gap-[33px] mt-16 text-center text-xl'>
@@ -62,7 +62,7 @@ const Header = ({handleToggleNav, isNavOpen}) => {
             smooth={true} 
             duration={400}
             className='text-white bg-primary-blue p-2 rounded-md w-32 mb-4 lg:mb-0 hover:bg-active-blue'>
-            Join Us
+            Contact Us
         </ScrollLink>
       </div>
     </nav>
@@ -101,7 +101,7 @@ const Header = ({handleToggleNav, isNavOpen}) => {
             to='contact-us'
             smooth={true} 
             duration={400}>
-            Join Us
+            Contact Us
         </ScrollLink>
     </div>
   </header>

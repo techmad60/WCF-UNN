@@ -169,23 +169,47 @@ function App() {
           </div>
         </section>
 
+        <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5 my-16' id='events'>
+          <h2 className='text-[32px]'>Quote of the week</h2>
+          <img src="./images/img-event.png" alt="" className='w-[272px] rounded-[20px] mt-6'/>
+          <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>
+          When God decides to favour you, all men will be in awe of you </p>
+          <p className='font-zhi-mang-xing text-xl'>~Pastor Chris</p>
+
+          <div className='pt-4 leading-9'>
+            <p className='px-12 text-md font-semibold'>Sunday Light Fellowship</p>
+            <p className=' text-xs'>( Feb 18th 2023 )</p>
+          </div>
+        </section>
+
+        <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6 text-white'>
+          <h2 className='text-[32px]'>Picture of the week</h2>
+          <div>
+            <img src="./images/img-event.png" alt="" className='py-6'/>
+          </div>
+          <div className='pt-4 leading-9'>
+            <p className='px-12 text-md font-semibold'>Sunday Light Fellowship</p>
+            <p className=' text-xs'>( Feb 18th 2023 )</p>
+          </div>
+        </section>
+
         <section className='flex flex-col justify-center items-center text-center my-12 text-xs'>
           <h2 className='text-[32px] text-primary-blue py-4'>Support Us</h2>
 
           <div className='py-4'>
             <p>Bank: First Bank</p>
             <p>Acc No: 1490256593</p>
-            <p>Chiamaka Uchechukwu</p>
+            <p>Watchman Cammpus Fellowship UNN</p>
           </div>
           <div className='py-4'>
             <p>Bank: First Bank</p>
             <p>Acc No: 1490256593</p>
-            <p>Chiamaka Uchechukwu</p>
+            <p>Watchman Cammpus Fellowship UNN</p>
           </div>
           <div className='py-4'>
             <p>Bank: First Bank</p>
             <p>Acc No: 1490256593</p>
-            <p>Chiamaka Uchechukwu</p>
+            <p>Watchman Cammpus Fellowship UNN</p>
           </div>
         </section>
 
