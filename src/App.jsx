@@ -54,7 +54,7 @@ function App() {
     // Set interval to change the quote every 5 seconds
     const intervalId = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % quoteData.length);
-    }, 6000);
+    }, 3000);
 
     // Clean up interval on component unmount
     return () => clearInterval(intervalId);
