@@ -118,7 +118,7 @@ const Content = ({quoteData, currentIndex}) => {
         < Gallery />
         <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5 my-16' id='events'>
         <h2 className='text-[32px]'>Quote of the week</h2>
-        <img src="./images/Pastor-Chris.png" alt="" className='w-[272px] rounded-[20px] mt-6' loading='lazy'/>
+        <img src="./images/Pastor-Chris.jpg" alt="" className='w-[272px] rounded-[20px] mt-6' loading='lazy'/>
         <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>
         When God decides to favour you, all men will be in awe of you. </p>
         <p className='font-zhi-mang-xing text-xl'>~Pastor Chris</p>
