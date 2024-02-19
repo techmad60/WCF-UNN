@@ -5,30 +5,41 @@ import '../App.css'; // Import CSS file for styles
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const handlePrevClick = () => {
-    setCurrentIndex(prevIndex => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
+    if (currentIndex !== 0) {
+      setCurrentIndex(prevIndex => prevIndex - 1);
+    }
   };
 
   const handleNextClick = () => {
-    setCurrentIndex(prevIndex => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
+    if (currentIndex !== pictures.length - 1) {
+      setCurrentIndex(prevIndex => prevIndex + 1);
+    }
   };
 
   return (
-    <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6 relative'>
+    <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6'>
       <h2 className='text-[32px] text-white'>Gallery</h2>
-      <div className="gallery-container overflow-hidden">
-        {/* Wrapper for sliding images */}
-        <div className="gallery-wrapper transition-transform duration-500 ease-in-out flex justify-center items-center  w-[300px]" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {/* Iterate through images and display them */}
-          {pictures.map((imageUrl, index) => (
-            <img key={index} src={imageUrl} alt="" className='my-6 rounded-[20px]' />
-          ))}
+      <div className="gallery-container  w-[272px] relative flex justify-center items-center">
+        {/* Show only the current image */}
+        <img src={pictures[currentIndex]} alt="" className='my-6 rounded-[20px] w-full ' />
+        {/* Navigation buttons */}
+        <div className='flex absolute justify-between w-[320px] z-20'>
+        <FontAwesomeIcon
+            icon='chevron-left'
+            className={`bg-white rounded-full h-[20px] w-[20px] p-2 text-xl text-primary-blue active:text-active-blue ${
+              currentIndex === 0 ? 'pointer-events-none' : '' 
+            }`}
+            onClick={handlePrevClick}
+          />
+         <FontAwesomeIcon
+            icon='chevron-right'
+            className={`bg-white rounded-full h-[20px] w-[20px] p-2 text-xl text-primary-blue active:text-active-blue ${
+              currentIndex === pictures.length - 1 ? 'pointer-events-none' : '' 
+            }`}
+            onClick={handleNextClick}
+          />
         </div>
-      </div>
-      <div className='flex absolute justify-between w-[320px]'>
-        <FontAwesomeIcon icon='chevron-left' className='bg-white rounded-full h-[20px] w-[20px] p-2 text-xl text-primary-blue active:text-active-blue transition-transform duration-500 ease-in-out' onClick={handlePrevClick} />
-        <FontAwesomeIcon icon='chevron-right' className='bg-white rounded-full h-[20px] w-[20px] p-2 text-xl text-primary-blue active:text-active-blue transition-transform duration-500 ease-in-out' onClick={handleNextClick} />
       </div>
     </section>
   );

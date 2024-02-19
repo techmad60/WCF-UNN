@@ -54,7 +54,7 @@ const Content = ({quoteData, currentIndex}) => {
             Tuesday Charismatic Hour
             </p>
             <p className="font-semibold text-white text-[12px]">@Carva Auitorium</p>
-            <p className="text-center text-white text-[12px] font-extrabold pt-3">6:00pm - 8:30pm </p>
+            <p className="text-center text-white text-[12px]  pt-3">6:00pm - 8:30pm </p>
             </div>
         </section>
 
@@ -64,13 +64,13 @@ const Content = ({quoteData, currentIndex}) => {
             Thursday Bible Study
             </p>
             <p className="font-semibold text-white text-[12px]">@Carva Auitorium</p>
-            <p className="text-center text-white text-[12px] font-extrabold pt-3">6:00pm - 8:30pm</p>
+            <p className="text-center text-white text-[12px]  pt-3">6:00pm - 8:30pm</p>
             </div>
         </section>
         </div>
         <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5' id='events'>
         <h2 className='text-[32px]'>Upcoming events</h2>
-        <img src="./images/img-event.png" alt="" className='w-[272px] rounded-[20px] mt-6'/>
+        <img src="./images/img3.png.jpg" alt="" className='w-[272px] rounded-[20px] mt-6'/>
         <p className='font-medium text-[20px] py-2 font-zhi-mang-xing tracking-[0.2em]'>Sister's Week</p>
         <p className='px-12 pb-3 text-xs'>Topic: <span className='font-medium'>"THE EMERGENCE OF HOLY WOMEN OF INFLUENCE."</span></p>
         <p className='px-12 pb-3 text-xs'>Text: <span className='font-medium'> Exodus 14:14</span></p>
@@ -116,7 +116,7 @@ const Content = ({quoteData, currentIndex}) => {
         </div>
         </section>
         < Gallery />
-        <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5 my-16' id='events'>
+        <section className='bg-event-blue flex flex-col justify-center items-center text-white text-center py-5 my-24' id='events'>
         <h2 className='text-[32px]'>Quote of the week</h2>
         <img src="./images/Pastor-Chris.jpg" alt="" className='w-[272px] rounded-[20px] mt-6' loading='lazy'/>
         <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>
@@ -132,7 +132,7 @@ const Content = ({quoteData, currentIndex}) => {
         <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6 text-white'>
         <h2 className='text-[32px]'>Picture of the week</h2>
         <div>
-            <img src="./images/img-event.png" alt="" className='py-6'/>
+            <img src="./images/img2.png" alt="" className='my-6 w-[272px] rounded-[20px]'/>
         </div>
         <div className='pt-4 leading-9'>
             <p className='px-12 text-md font-semibold'>Sunday Light Fellowship</p>
