@@ -20,7 +20,7 @@ const Gallery = () => {
   return (
     <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6 h-[400px]'>
       <h2 className='text-[32px] text-white'>Gallery</h2>
-      <div className="gallery-container  w-[400px] relative flex justify-center items-center">
+      <div className="gallery-container  w-[305px] relative flex justify-center items-center">
         {/* Show only the current image */}
         <img src={pictures[currentIndex]} alt="" className='m-12 rounded-[20px] w-[305px]' />
         {/* Navigation buttons */}
