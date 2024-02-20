@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = ({handleToggleNav, isNavOpen}) => {
   return (
-    <header className='relative p-4 md:p-8 lg:flex lg:justify-between lg:items-center lg:pt-8 lg:px-16 lg:mx-auto lg:max-w-5xl header'>
+    <header className='relative p-4 md:p-8 lg:flex lg:justify-between lg:items-center lg:pt-8 lg:px-16  header lg:w-full lg:mx-auto lg:max-w-5xl'>
     <div className='flex justify-between items-center lg:items-start'>
-        <img src="/images/logo.png" alt=""  className='w-8'/>
+        <img src="/images/logo.png" alt=""  className='w-8 lg:w-12'/>
         <button onClick={handleToggleNav} className='cursor-pointer lg:hidden outline-0 border-[0px]'> 
           <FaBars className='text-xl' />
         </button>
@@ -25,7 +25,7 @@ const Header = ({handleToggleNav, isNavOpen}) => {
       <button onClick={handleToggleNav} className=' lg:hidden pt-4'>
         <FontAwesomeIcon icon = 'x' className='text-xl' />
       </button>
-      <ul className='leading-[4rem] gap-[33px] mt-16 text-center text-xl'>
+      <ul className='leading-[4rem] gap-[33px] mt-16 text-center text-xl lg:gap-[40px] flex-grow'>
         <li className='hover:text-primary-blue transition-all duration-300 ease-in-out cursor-pointer '>
           <ScrollLink
             onClick={() => isNavOpen && handleToggleNav()}
@@ -96,7 +96,7 @@ const Header = ({handleToggleNav, isNavOpen}) => {
         </ul> 
     </nav>
 
-    <div className='lg:flex flex-row mt-10 w-full  lg:mt-0 lg:w-fit  hover:bg-active-blue active:translate-y-4 transition-all duration-300 ease-in-out bg-primary-blue text-white justify-center rounded-md items-center py-2 px-8  hidden'>
+    <div className='lg:flex flex-row mt-10 w-full  lg:mt-0 lg:w-fit  hover:bg-active-blue active:translate-y-4 transition-all duration-300 ease-in-out bg-primary-blue text-white justify-center rounded-md items-center py-2 px-8  hidden lg:px-4'>
         <ScrollLink
             to='contact-us'
             smooth={true} 

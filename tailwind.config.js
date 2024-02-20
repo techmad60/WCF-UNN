@@ -14,6 +14,7 @@ export default {
       },
       backgroundImage: {
         'bg-mobile': "url('/images/img-1.png')",
+        'desktop': "url('/images/img-desktop.png')",
         'sunday': "url('/images/img13.png.jpg')",
         'tuesday': "url('/images/img4.png.jpg')",
         'thursday': "url('/images/img14.png.jpg')",

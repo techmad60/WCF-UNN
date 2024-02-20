@@ -18,23 +18,23 @@ const Gallery = () => {
   };
 
   return (
-    <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6 h-[400px]'>
+    <section className='flex flex-col justify-center items-center text-center bg-gallery-blue mt-12 py-6 h-[400px] lg:h-[600px]'>
       <h2 className='text-[32px] text-white'>Gallery</h2>
-      <div className="gallery-container  w-[305px] relative flex justify-center items-center">
+      <div className="gallery-container w-[305px] relative flex justify-center items-center lg:w-[500px]">
         {/* Show only the current image */}
-        <img src={pictures[currentIndex]} alt="" className='m-12 rounded-[20px] w-[305px]' />
+        <img src={pictures[currentIndex]} alt="" className='m-12 rounded-[20px] w-[305px] lg:w-[500px]'  loading='lazy'/>
         {/* Navigation buttons */}
-        <div className='flex absolute justify-between w-[320px] z-20'>
+        <div className='flex absolute justify-between w-[320px] z-20 lg:w-[605px]'>
         <FontAwesomeIcon
             icon='chevron-left'
-            className={`bg-white rounded-full h-[20px] w-[20px] p-2 text-xl text-primary-blue active:text-active-blue ${
+            className={`bg-white rounded-full h-[20px] w-[20px] lg:h-[40px] lg:w-[40px] p-2 text-xl lg:p-4 text-primary-blue active:text-active-blue ${
               currentIndex === 0 ? 'pointer-events-none' : '' 
             }`}
             onClick={handlePrevClick}
           />
          <FontAwesomeIcon
             icon='chevron-right'
-            className={`bg-white rounded-full h-[20px] w-[20px] p-2 text-xl text-primary-blue active:text-active-blue ${
+            className={`bg-white rounded-full h-[20px] w-[20px] lg:h-[40px] lg:w-[40px] p-2 text-xl lg:p-4 text-primary-blue active:text-active-blue ${
               currentIndex === pictures.length - 1 ? 'pointer-events-none' : '' 
             }`}
             onClick={handleNextClick}
