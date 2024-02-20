@@ -13,7 +13,10 @@ export default {
         
       },
       backgroundImage: {
-        'bg-mobile': "url('/images/img-1.png')"
+        'bg-mobile': "url('/images/img-1.png')",
+        'sunday': "url('/images/img13.png.jpg')",
+        'tuesday': "url('/images/img4.png.jpg')",
+        'thursday': "url('/images/img14.png.jpg')",
       },
       
       letterSpacing: {

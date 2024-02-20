@@ -37,7 +37,7 @@ const Content = ({quoteData, currentIndex}) => {
 
         <div className='flex flex-col justify-center items-center relative my-5'>
         <h2 className="text-[32px] text-primary-blue flex flex-col justify-center items-center pt-6">Days of Activities</h2>
-        <section className='relative bg-bg-mobile bg-cover bg-center  w-[148px] h-[134px] rounded-[20px] my-8'>
+        <section className='relative bg-sunday bg-cover bg-center  w-[148px] h-[134px] rounded-[20px] my-8'>
             
             <div className='absolute overlay bg-transparent-blue flex flex-col items-center justify-center  top-0 left-0 w-[148px] h-[134px] rounded-[20px]'>
             <p className='text-center stroke-white text-[16px] text-white w-[262px] font-semibold pb-2 px-12'>
@@ -48,7 +48,7 @@ const Content = ({quoteData, currentIndex}) => {
             </div>
         </section>
 
-        <section className='relative bg-bg-mobile bg-cover bg-center  w-[148px] h-[134px] rounded-[20px] my-8'>
+        <section className='relative bg-tuesday bg-cover bg-center  w-[148px] h-[134px] rounded-[20px] my-8'>
             <div className='absolute overlay bg-transparent-blue flex flex-col items-center justify-center  top-0 left-0 w-[148px] h-[134px] rounded-[20px]'>
             <p className='text-center stroke-white text-[16px] text-white w-[262px] font-semibold pb-1 px-16'>
             Tuesday Charismatic Hour
@@ -58,7 +58,7 @@ const Content = ({quoteData, currentIndex}) => {
             </div>
         </section>
 
-        <section className='relative bg-bg-mobile bg-cover bg-center  w-[148px] h-[134px] rounded-[20px] my-8'>
+        <section className='relative bg-thursday bg-cover bg-center  w-[148px] h-[134px] rounded-[20px] my-8'>
             <div className='absolute overlay bg-transparent-blue flex flex-col items-center justify-center  top-0 left-0 w-[148px] h-[134px] rounded-[20px]'>
             <p className='text-center stroke-white text-[16px] text-white w-[262px] font-semibold pb-2 px-12'>
             Thursday Bible Study
@@ -74,11 +74,11 @@ const Content = ({quoteData, currentIndex}) => {
         <p className='font-medium text-[20px] py-2 font-zhi-mang-xing tracking-[0.2em]'>Sister's Week</p>
         <p className='px-12 pb-3 text-xs'>Topic: <span className='font-medium'>"THE EMERGENCE OF HOLY WOMEN OF INFLUENCE."</span></p>
         <p className='px-12 pb-3 text-xs'>Text: <span className='font-medium'> Exodus 14:14</span></p>
-        <p className='pt-6 text-xs'>( Feb: 18th-25th )</p>
+        <p className='pt-6 text-xs'>( Feb 26th - March 3rd )</p>
         </section>
 
         <section>
-        <h2 className="text-[32px] text-primary-blue flex flex-col justify-center items-center pt-6">Testimonials</h2>
+        <h2 className="text-[32px] text-primary-blue flex flex-col justify-center items-center pt-6">Our Testimonies</h2>
 
         <div>
             <article className='flex flex-col justify-center items-center text-center'>
