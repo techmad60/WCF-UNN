@@ -100,7 +100,7 @@ const Content = ({quoteData, currentIndex}) => {
                 </article>
                 <article className='flex flex-col justify-center items-center text-center my-6'>
                 <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
-                <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
+                <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>Finding this fellowship felt like finding family. I've discovered love, acceptance, and a sense of belonging here.</p>
                 <div className='pt-3 text-xs'>
                     <p className='text-primary-blue  font-semibold'>Favour Nnabuife</p>
                     <p className='text-xs leading-5'> (First Class) <br/>
@@ -111,7 +111,7 @@ const Content = ({quoteData, currentIndex}) => {
                 </article>
                 <article className='flex flex-col justify-center items-center text-center'>
                     <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
-                    <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
+                    <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>Through this fellowship, I've experienced the incredible power of prayer and unity, witnessing miracles and finding strength in community</p>
                     <div className='pt-3 text-xs'>
                         <p className='text-primary-blue font-semibold'>Favour Nnabuife</p>
                         <p className=' leading-5'> (First Class) <br/>
