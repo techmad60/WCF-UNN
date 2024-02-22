@@ -88,34 +88,34 @@ const Content = ({quoteData, currentIndex}) => {
 
             <div className='lg:flex'>
                 <article className='flex flex-col justify-center items-center text-center'>
-                    <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
+                    <img src="/images/Testimony-1.jpg" alt="" className='rounded-[20px] mt-6 h-[100px] w-[100px]' loading='lazy' />
                     <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>This fellowship transformed my life, providing support and guidance that led me to a deeper connection with God.</p>
                     <div className='pt-3 text-xs'>
-                        <p className='text-primary-blue text-[12px] font-semibold'>Favour Nnabuife</p>
+                        <p className='text-primary-blue text-[12px] font-semibold'>Angela Nwajuru</p>
                         <p className='text-xs leading-5'> (First Class) <br/>
-                        <span className='text-xs'>B.SC Pharmacy.</span>
+                        <span className='text-xs'>B.SC Music.</span>
                         </p>
                         
                     </div>
                 </article>
                 <article className='flex flex-col justify-center items-center text-center my-6'>
-                <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
+                <img src="/images/Testimony-2.jpg" alt="" className='rounded-[20px] mt-6 h-[100px] w-[100px]' loading='lazy'/>
                 <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>Finding this fellowship felt like finding family. I've discovered love, acceptance, and a sense of belonging here.</p>
                 <div className='pt-3 text-xs'>
                     <p className='text-primary-blue  font-semibold'>Favour Nnabuife</p>
                     <p className='text-xs leading-5'> (First Class) <br/>
-                    <span className='text-xs'>B.SC Pharmacy.</span>
+                    <span className='text-xs'>B.SC Political Science.</span>
                     </p>
                     
                 </div>
                 </article>
                 <article className='flex flex-col justify-center items-center text-center'>
-                    <img src="/images/img-1-mobile.png" alt="" className='rounded-[20px] mt-6'/>
+                    <img src="/images/Testimony-3.jpg" alt="" className='rounded-[20px] mt-6 h-[100px] w-[100px]' loading='lazy'/>
                     <p className='text-xs px-16 pt-4 leading-[20px]'><span className='font-pontano text-[40px]'>“</span>Through this fellowship, I've experienced the incredible power of prayer and unity, witnessing miracles and finding strength in community</p>
                     <div className='pt-3 text-xs'>
-                        <p className='text-primary-blue font-semibold'>Favour Nnabuife</p>
+                        <p className='text-primary-blue font-semibold'>Ifeadigo Favour</p>
                         <p className=' leading-5'> (First Class) <br/>
-                        <span className=''>B.SC Pharmacy.</span>
+                        <span className=''>B.SC Physics/Astronomy.</span>
                         </p>
                     </div>
                 </article>

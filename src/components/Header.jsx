@@ -25,7 +25,7 @@ const Header = ({handleToggleNav, isNavOpen}) => {
       <button onClick={handleToggleNav} className=' lg:hidden pt-4'>
         <FontAwesomeIcon icon = 'x' className='text-xl' />
       </button>
-      <ul className='leading-[4rem] gap-[33px] mt-16 text-center text-xl lg:gap-[40px] flex-grow'>
+      <ul className='leading-[4rem] gap-[33px] mt-16 text-center text-xl lg:gap-[40px]'>
         <li className='hover:text-primary-blue transition-all duration-300 ease-in-out cursor-pointer '>
           <ScrollLink
             onClick={() => isNavOpen && handleToggleNav()}
